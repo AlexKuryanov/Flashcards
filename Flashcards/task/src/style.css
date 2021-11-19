@@ -1,0 +1,65 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background: url(./world.png) no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.title {
+    font-family: "Courier Prime", sans-serif;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.cards {
+    max-width: 770px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+    min-height: 250px;
+    font-size: 4rem;
+    background-color: rgba(249, 239, 229, .7);
+    border-radius: 10px;
+    position: relative;
+    transition: transform 1s linear;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.question,
+.answer {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Gluten, sans-serif;
+    color: rgba(255, 124, 2, 1);
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.answer {
+    transform: rotateY(180deg);
+    background-color: rgba(255, 124, 2, .7);
+    color: rgba(249, 239, 229, 1);
+}
+
+.wrap {
+    perspective: 1000px;
+}
